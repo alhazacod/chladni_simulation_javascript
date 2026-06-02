@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chladni Figures Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <canvas id="glCanvas"></canvas>
+        
+        <div id="controls">
+            <div class="control-group">
+                <label>Particles: <span id="valParticles">10000</span></label>
+                <input type="range" id="sliderParticles" min="1000" max="30000" step="1000" value="10000" autocomplete="off">
+                <button id="btnRstPrtclPos">Reset Particles Positions</button>
+            </div>
+
+            <div class="control-group">
+                <label>Frequency (ω): <span id="valFreq">19.0</span></label>
+                <input type="range" id="sliderFreq" min="10" max="100" step="0.5" value="19" autocomplete="off">
+            </div>
+
+            <div class="control-group">
+                <label>Boundary Condition:</label>
+                <select id="selectBC" autocomplete="off">
+                    <option value="dirichlet">Dirichlet (Fixed Edges)</option>
+                    <option value="neumann">Neumann (Free Edges)</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Sources: <span id="valSources">1</span></label>
+                <input type="range" id="sliderSources" min="1" max="10" step="1" value="1" autocomplete="off">
+            </div>
+
+            <button id="btnEvenSources">Distribute Sources Evenly</button>
+            <p class="hint">Click & drag on the canvas to move sources.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
