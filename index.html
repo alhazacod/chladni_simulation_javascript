@@ -9,17 +9,37 @@
 <body>
     <div id="app-container">
         <canvas id="glCanvas"></canvas>
-        
+
         <div id="controls">
+
+            <!-- AUDIO SECTION -->
+            <div class="section-title">Sound Input</div>
+
             <div class="control-group">
-                <label>Particles: <span id="valParticles">10000</span></label>
-                <input type="range" id="sliderParticles" min="1000" max="30000" step="1000" value="10000" autocomplete="off">
-                <button id="btnRstPrtclPos">Reset Particles Positions</button>
+                <button id="btnMic">🎙 Use Microphone</button>
+
+                <label class="file-label" for="inputFile">♪ Load Audio File</label>
+                <input type="file" id="inputFile" accept="audio/*">
+
+                <button id="btnStopAudio">■ Stop Audio</button>
+                <p id="audioStatus" class="audio-status"></p>
             </div>
+
+            <!-- VU meter / frequency visualizer -->
+            <canvas id="vuCanvas" width="240" height="48"></canvas>
+
+            <!-- MANUAL CONTROLS -->
+            <div class="section-title">Manual Controls</div>
 
             <div class="control-group">
                 <label>Frequency (ω): <span id="valFreq">19.0</span></label>
                 <input type="range" id="sliderFreq" min="10" max="100" step="0.5" value="19" autocomplete="off">
+            </div>
+
+            <div class="control-group">
+                <label>Particles: <span id="valParticles">10000</span></label>
+                <input type="range" id="sliderParticles" min="1000" max="30000" step="1000" value="10000" autocomplete="off">
+                <button id="btnRstPrtclPos">Reset Particle Positions</button>
             </div>
 
             <div class="control-group">
