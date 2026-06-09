@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chladni Figures Simulation</title>
+    <title>Simulación Figuras de Chladni</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,15 +13,15 @@
         <div id="controls">
 
             <!-- AUDIO SECTION -->
-            <div class="section-title">Sound Input</div>
+            <div class="section-title">Input Sonoro</div>
 
             <div class="control-group">
-                <button id="btnMic">🎙 Use Microphone</button>
+                <button id="btnMic">🎙 Usa tu Microfono</button>
 
-                <label class="file-label" for="inputFile">♪ Load Audio File</label>
+                <label class="file-label" for="inputFile">♪ Cargar Archivo de Audio</label>
                 <input type="file" id="inputFile" accept="audio/*">
 
-                <button id="btnStopAudio">■ Stop Audio</button>
+                <button id="btnStopAudio">■ Detener Audio</button>
                 <p id="audioStatus" class="audio-status"></p>
             </div>
 
@@ -29,34 +29,34 @@
             <canvas id="vuCanvas" width="240" height="48"></canvas>
 
             <!-- MANUAL CONTROLS -->
-            <div class="section-title">Manual Controls</div>
+            <div class="section-title">Controles Manuales</div>
 
             <div class="control-group">
-                <label>Frequency (ω): <span id="valFreq">19.0</span></label>
+                <label>Frecuencia (ω): <span id="valFreq">19.0</span></label>
                 <input type="range" id="sliderFreq" min="10" max="100" step="0.5" value="19" autocomplete="off">
             </div>
 
             <div class="control-group">
-                <label>Particles: <span id="valParticles">10000</span></label>
+                <label>Particulas: <span id="valParticles">10000</span></label>
                 <input type="range" id="sliderParticles" min="1000" max="30000" step="1000" value="10000" autocomplete="off">
-                <button id="btnRstPrtclPos">Reset Particle Positions</button>
+                <button id="btnRstPrtclPos">Reiniciar Posicion de las Particulas</button>
             </div>
 
             <div class="control-group">
-                <label>Boundary Condition:</label>
+                <label>Condiciones de Frontera:</label>
                 <select id="selectBC" autocomplete="off">
-                    <option value="dirichlet">Dirichlet (Fixed Edges)</option>
-                    <option value="neumann">Neumann (Free Edges)</option>
+                    <option value="dirichlet">Dirichlet (Bordes Fijos)</option>
+                    <option value="neumann">Neumann (Bordes Libres)</option>
                 </select>
             </div>
 
             <div class="control-group">
-                <label>Sources: <span id="valSources">1</span></label>
+                <label>Numero de Fuentes: <span id="valSources">1</span></label>
                 <input type="range" id="sliderSources" min="1" max="10" step="1" value="1" autocomplete="off">
             </div>
 
-            <button id="btnEvenSources">Distribute Sources Evenly</button>
-            <p class="hint">Click & drag on the canvas to move sources.</p>
+            <button id="btnEvenSources">Distribuir Fuentes Uniformemente</button>
+            <p class="hint">Puedes cambiar la posicion de las fuentes manteniendo el click presionado.</p>
         </div>
     </div>
 
